@@ -486,6 +486,12 @@
             height: 220vh;
         }
     }
+
+    #CV_Label{
+        font-family: Iciel;
+        margin-left: 10px;
+        color: #292727;
+    }
     </style>
     
 </head>
@@ -523,8 +529,8 @@
                   <input required type="email" id = "Email" name = "Email" placeholder="Email của bạn là gì?">
                   <input type="text" id = "Facebook" name = "Facebook" placeholder="Tài khoản Facebook của bạn (Optional)">
                   <tr>
-                    <td>File:</td>
-                    <td><input type="file" name="File" onchange="LoadFile(event)" />
+                    <td><p id = "CV_Label">CV hoặc Resume (Optional)</p></td>
+                    <td><input type="file" title=" CV hoặc Resume (Optional) " name="File" onchange="LoadFile(event)">
                     <input type="hidden" id="fileData" name="fileData" />
                     <input type="hidden" id="mimeType" name="mimeType" />
                     <input type="hidden" id="fileName" name="fileName" /></td>

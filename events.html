@@ -180,6 +180,10 @@ body{
   font-weight: 10;
 }
 
+.container .content h2.bigText2 {
+  margin-bottom: 0;
+}
+
 .container .content p {
   font-family: Oswald;
   margin: 0;
@@ -223,8 +227,22 @@ body{
   right: -98px;
 }
 
+.container.left .long {
+  right: -118px;
+}
+
 .container.right .date {
   left: -114px;
+}
+
+.timeline .content h2.bigText1{
+  margin-left: 20px;
+  font-size: 180%;
+}
+
+.timeline .content h2.bigText2{
+  margin-left: 50px;
+  font-size: 180%;
 }
 }
 
@@ -232,6 +250,9 @@ body{
   .title{
     margin-top: 11vw;
   }
+  .container .content h2.bigText1 {
+  transform: translateY(2vw);
+}
 }
 
 @media (max-width: 1000px){
@@ -353,22 +374,17 @@ body{
           </div>
         </div>
         <div class="container left big">
-          <div class="date">Tháng 6</div>
+          <div class="date long">Tháng 6-7</div>
           <i class="icon fa fa-user"></i>
           <div class="content">
-            <h2>Chương trình dạy học cho hơn 100 trẻ tại làng trẻ SOS </h2>
-            <p>
-                <strong>Đối tượng học viên </strong> <br> Đối tượng trung tâm tổ chức hướng đến là các trẻ em tại làng trẻ SOS. <br> Học viên là những cá nhân chưa được tiếp xúc nhiều với các chủ đề đa dạng và cần thiết trong cuộc sống như quyền trẻ em, tư duy sáng tạo,...
-                <br> <strong> Đối tượng giáo viên</strong><br> Đối tượng giáo viên bao gồm các bạn trẻ đam mê, có chuyên môn hoặc được đào tạo về lĩnh vực giảng dạy. <br> Những bạn trẻ cấp 3, đại học mong muốn đóng góp cho cộng đồng thuộc lĩnh vực học thuật chuyên môn.
-                <br> <strong>Nội dung dạy học chi tiết</strong> <br> Cấp 1: Trải nghiệm làm giấy từ giấy cũ đã qua sử dụng. <br> Cấp 2-3: Kĩ năng quản lý và phân bổ thời gian.
-            </p>
+            <h2 class="bigText1">Chương trình dạy học cho hơn 100 trẻ tại làng trẻ SOS </h2>
           </div>
         </div>
         <div class="container right">
-          <div class="date">Tháng 7-8</div>
+          <div class="date">Tháng 8</div>
           <i class="icon fa fa-running"></i>
           <div class="content">
-            <h2>Workshop và triển lãm tranh</h2>
+            <h2>Workshop, Triễn lãm tranh và Gây quỹ</h2>
             <p>
                 Sự kiện tổng kết chương trình dạy học tại làng trẻ SOS.
                 <br> Những sản phẩm của các bạn học sinh tại làng trẻ SOS sẽ được trưng bày tại buổi triển lãm.
@@ -380,12 +396,7 @@ body{
           <div class="date">Tháng 9</div>
           <i class="icon fa fa-cog"></i>
           <div class="content">
-            <h2> Bootcamp giáo dục</h2>
-            <p>
-                Sự kiện mùa hè dành cho học sinh cấp 2 sắp chuyển cấp nhằm trải nghiệm những hoạt động giáo dục khai phóng như Mô phỏng Liên Hợp Quốc, tranh biện, hùng biện…
-                <br> Sự kiện được tổ chức tại một trường cấp 3 giúp các em trải nghiệm môi trường khi chuyển cấp.
-                <br> Các diễn giả là học sinh các lớp chuyên chia sẻ kinh nghiệm học tập.
-            </p>
+            <h2 class="bigText2">Bootcamp giáo dục</h2>
           </div>
         </div>
         </div>

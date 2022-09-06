@@ -14,6 +14,11 @@
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+</script>
 <script> 
 $(function(){
   $("#header").load("headerTransparent.html"); 
@@ -200,7 +205,6 @@ body{
   font-size: 35px;
 }
 
-
 .title{
   font-family: 'Oswald', sans-serif;
     text-align: center;
@@ -343,11 +347,27 @@ body{
     padding: 75px 20px 65px 90px;
   }
 }
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.reveal.active{
+    transform: translateY(90px);
+    opacity: 1;
+}
+
+.Baby{
+  margin-bottom: 95px;
+}
 </style>
 </head>
 <body>
   <div id="header"></div>
 
+  <div class="reveal">
     <div class="title">
         Các hoạt động dự kiến năm 2022
     </div>
@@ -401,9 +421,160 @@ body{
         </div>
         </div>
       </div>
+    </div>
+
+    <div class="reveal">
+      <div class="Baby">
+      <div class="title">
+        Các hoạt động dự kiến năm 2021
+    </div>
+    <div class="timeline">
+        <div class="container left">
+          <div class="date">Tháng 3</div>
+          <i class="icon fa fa-home"></i>
+          <div class="content">
+            <h2> Workshop về Thấu hiểu cảm xúc và khai thác tư duy học tập</h2>
+            <p>
+                Buổi Workshop “Thấu hiểu cảm xúc và khai thác tư duy học tập” nhằm giải quyết các khủng hoảng trong quá trình học tập.
+                Nhận thấy rằng tại môi trường học tập Việt Nam, việc phát triển tư duy mở (growth mindset) gặp nhiều bất cập và khó khăn. Vì thế, được nghe chia sẻ của những anh chị đi trước sẽ giúp các bạn tìm được cách tự mình giải quyết những vấn đề ấy bằng việc thấu hiểu bản thân cũng như thay đổi tư duy trong học tập.
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="date">Tháng 4-5</div>
+          <i class="icon fa fa-gift"></i>
+          <div class="content">
+            <h2>Gây quỹ học bổng và xin tài trợ cho hoạt động dạy học</h2>
+            <p>
+                Gây quỹ học bổng và xin tài trợ cho hoạt động dạy học. 
+            </p>
+          </div>
+        </div>
+        <div class="container left big">
+          <div class="date long">Tháng 6-7</div>
+          <i class="icon fa fa-user"></i>
+          <div class="content">
+            <h2 class="bigText1">Chương trình dạy học cho hơn 100 trẻ tại làng trẻ SOS </h2>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="date">Tháng 8</div>
+          <i class="icon fa fa-running"></i>
+          <div class="content">
+            <h2>Workshop, Triễn lãm tranh và Gây quỹ</h2>
+            <p>
+                Sự kiện tổng kết chương trình dạy học tại làng trẻ SOS.
+                <br> Những sản phẩm của các bạn học sinh tại làng trẻ SOS sẽ được trưng bày tại buổi triển lãm.
+                <br> Buổi triển lãm được lồng ghép cùng một buổi workshop giáo dục truyền cảm hứng.
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="date">Tháng 9</div>
+          <i class="icon fa fa-cog"></i>
+          <div class="content">
+            <h2 class="bigText2">Bootcamp giáo dục</h2>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+
 
 
       <div id="footer"></div>
+
+      <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('scroll', counterReveal);
+    
+        function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+    
+          for(var i = 0; i < reveals.length; i++){
+    
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+    
+            if(revealtop < windowheight - revealpoint){
+              reveals[i].classList.add('active');
+            }
+            else{
+              reveals[i].classList.remove('active');
+            }
+          }
+
+          var reveal2s = document.querySelectorAll('.reveal2');
+    
+          for(var i = 0; i < reveal2s.length; i++){
+    
+            var windowheight = window.innerHeight;
+            var reveal2top = reveal2s[i].getBoundingClientRect().top;
+            var reveal2point = 150;
+    
+            if(reveal2top < windowheight - reveal2point){
+              reveal2s[i].classList.add('active');
+            }
+            else{
+              reveal2s[i].classList.remove('active');
+            }
+          }
+        }
+
+        function counterReveal(){
+            const counters = document.querySelectorAll('.counter');
+            const counterups = document.querySelectorAll('.counter-up');
+            const speed = 400; // The lower the slower
+            
+            for(var i = 0; i < counterups.length; i++){
+        
+            var windowheight = window.innerHeight;
+            var revealtop = counterups[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+                counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+
+                    // Lower inc to slow and higher to slow
+                    const inc = target / speed;
+
+                    // console.log(inc);
+                    // console.log(count);
+
+                    // Check if target is reached
+                    if (count < target) {
+                        // Add inc to count and output in counter
+                        counter.innerText = count + inc;
+                        // Call function every ms
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+                });
+            }
+            else{
+                counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    counter.innerText = 0; 
+                };
+
+                updateCount();
+                });
+            }
+            }
+        }
+
+        
+    </script>
 
 </body>
 </html>
